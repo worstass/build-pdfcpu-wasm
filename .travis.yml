@@ -6,10 +6,11 @@ go:
   - 1.12
 
 before_install:
-  - pwd
+  - cd ${GOPATH}/src && mkdir -p github.com/pdfcpu && cd ${GOPATH}/src/github.com/pdfcpu
   - git clone -b 'v0.3.3' --depth 1 https://github.com/pdfcpu/pdfcpu.git
   
 script:
+  - cd ${GOPATH}/src/github.com/pdfcpu
   - cd pdfcpu/cmd/pdfcpu
   - go install
   - pdfcpu version
