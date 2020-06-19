@@ -12,6 +12,7 @@ before_install:
 script:
   - cd ${GOPATH}/src/github.com/pdfcpu
   - cd pdfcpu/cmd/pdfcpu
+  - pwd
   - go install
   - pdfcpu version
   - GOOS=js GOARCH=wasm go build -o pdfcpu.wasm
