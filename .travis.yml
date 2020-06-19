@@ -6,6 +6,7 @@ go:
   - 1.12
 
 before_install:
+  - pwd
   - git clone -b 'v0.3.3' --depth 1 https://github.com/pdfcpu/pdfcpu.git
   
 script:
